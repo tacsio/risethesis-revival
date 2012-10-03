@@ -8,9 +8,11 @@ LaTeX template based on RiSE Thesis class developed by Yguaratã Cerqueira Caval
 License
 ==========
 
-RiSEThesis Revivial
+RiSEThesis Revivial - LaTeX class and template for B.Sc., M.Sc. and Ph.D. thesis. Based on RiSEThesis project with some
+fixes.
 
 Copyright (C) 2012  Tarcisio Coutinho
+
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
