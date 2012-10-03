@@ -1,0 +1,112 @@
+\documentclass[pt,bsc,oneside,onehalfspacing]{risethesis}
+
+\usepackage{natbib}
+\usepackage{babel}
+\usepackage{supertabular}
+\usepackage{moreverb}
+\usepackage{multirow}
+\usepackage{subfig}
+
+\usepackage[linkcolor=black,citecolor=black,urlcolor=black,colorlinks,pdfpagelabels,pdftitle={srp-tcs5},pdfauthor={Tarcisio Coutinho da Silva}]{hyperref}
+
+\renewcommand{\appendixtocname}{Apêndices} 
+\renewcommand{\appendixpagename}{Apêndices}
+
+\address{Recife}
+
+\universitypt{Universidade Federal de Pernambuco}
+\universityen{Federal University of Pernambuco}
+
+\departmentpt{Centro de Informática}
+\departmenten{Center for Informatics}
+
+\programpt{Graduação em Ciência da Computação}
+\programen{Graduate in Computer Science}
+
+\majorfieldpt{Ciência da Computação}
+\majorfielden{Computer Science}
+
+\title{Um Mecanismo de Monitoramento e Adaptação Dinâmica de Provedores de Serviços com Base em Atributos de Qualidade}
+\date{dezembro/2011}
+
+\author{Tarcisio Coutinho da Silva}
+\adviser{Nelson Souto Rosa}
+
+
+\begin{document}
+
+\frontmatter
+\frontpage
+\presentationpage
+
+\begin{dedicatory}
+Dedicado à minha Família, \\
+especialmente a meus pais e minha irmãzinha, por todo o incentivo e carinho oferecidos.
+\end{dedicatory}
+
+\acknowledgements
+
+A Deus, por tudo que fez e tem feito em minha vida.
+\\\\
+À minha Família, pelo apoio, incentivo e paciência ao longo dos anos, sempre me dando forças e coragem para que eu seguisse meus sonhos.
+\\\\
+Ao professor Nelson Rosa, pela oportunidade de realizar este trabalho e por sua orientação sempre clara e objetiva.
+\\\\
+A Fábio Souza, por sua ajuda, dedicação e sobretudo paciência, acompanhando todo o desenvolvimento deste trabalho sempre com boas idéias.
+\\\\
+A todos os amigos que fiz durante esses quatro anos e meio de graduação, sem vocês as viradas de noite ou os finais de semana no CIn não seriam divertidos como foram.
+\\\\
+A todos os amigos que fiz no NTI, obrigado por tornar meu primeiro estágio uma experiência interessante. Aprendi muito com todos.
+\\\\
+E a todos que direta ou indiretamente contribuíram durante minha graduação, meus sinceros agradecimentos.
+
+\begin{epigraph}[Shiawase no Iro]{Yoko Ishida}
+Oozora ni egaita\\
+Chiisana yume wo taisetsu ni shiyou\\
+Sousureba itsumo shiawase ni nareru\\
+Kitto.\\
+\vspace{0.5cm}
+Dê importância ao pequeno sonho que você pintou em direção ao céu\\
+Se fizer isto, você sempre será feliz\\
+Certamente.
+\vspace{0.2cm}
+\end{epigraph}
+
+% Abstract
+\resumo
+\input{abstract/resumo}
+
+\abstract
+\input{abstract/abstract}
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+% Lista de Siglas
+\input{acronyms}
+
+\mainmatter
+
+% Capitulos
+\include{chapters/intro/introducao}
+\include{chapters/chapter2/capitulo2}
+\include{chapters/chapter3/capitulo3}
+\include{chapters/chapter4/capitulo4}
+\include{chapters/end/conclusao}
+
+% Referencias
+% Styles: http://amath.colorado.edu/documentation/LaTeX/reference/faq/bibstyles.html#styles
+\bibliographystyle{unsrt}
+\bibliography{references}
+\addcontentsline{toc}{chapter}{Referencias Bibliográficas}
+
+
+% Apendice
+\clearpage
+\addappheadtotoc
+\appendix
+\appendixpage
+\include{appendix/apendice}
+
+\end{document}

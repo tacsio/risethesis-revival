@@ -1,0 +1,40 @@
+\chapter{Conclusão e Trabalhos Futuros}
+\label{ch:5}
+Neste trabalho foi  projetado e implementado um mecanismo que permite o monitoramento de recursos e atributos de qualidade, visando à adaptação dinâmica do provedor de serviços, em função do contexto em que esta executa.
+
+O principal objetivo por traz desse mecanismo, foi evitar eventuais quebras de contrato devido à demanda ou a limitação de recursos no contexto em que o serviço é provido.
+
+Foram apresentados os principais conceitos relacionados ao trabalho, como orientação a componentes, orientação a serviços e o ciclo PDCA para gestão de qualidade e melhoria de processos de desenvolvimento. Além das principais tecnologias utilizadas na construção dos componentes do mecanismo.
+
+Em seguida, descrevemos a plataforma DSOA, à qual este trabalho foi incorporado, apresentando seus objetivos, sua arquitetura e os principais componentes da plataforma. 
+
+Por fim, discutimos sobre a proposta deste trabalho, apresentando uma visão geral do contexto, identificando uma possível extensão à plataforma DSOA, definindo os componentes necessários à realização do trabalho, onde a estratégia de execução foi baseada nas etapas definidas pelo ciclo PDCA, incorporando suas características de busca por melhoria ao mecanismo.
+
+\section{Contribuições}
+
+As principais contribuições deste trabalho são apresentadas a seguir:
+
+\begin{itemize}
+
+\item \textbf{Suporte à adaptação dinâmica do provedor em função do contexto de execução}
+
+Suporte à adaptação dinâmica do provedor em função do contexto de execução através do desenvolvimento do gerente de adaptação do provedor (\textit{QoS Provider Manager}), que adapta o provedor de serviços em função da análise de atributos de qualidade e do contexto de execução. A adaptação é provida através de um conjunto de políticas de criação de instâncias padrão, disponibilizadas como serviços OSGi, o que possibilita a adição de novas políticas de criação em tempo execução.
+
+\item \textbf{Módulo de monitoramento de recursos}
+
+Um módulo de monitoramento de recursos de hardware foi construído com base em JMX, garantindo à plataforma uma maneira simples de obtenção de dados relacionados aos recursos de hardware da máquina em que esta executa.
+
+\item \textbf{Suporte à utilização de diferentes políticas de criação de instâncias em um ambiente OSGi distribuído}
+
+As políticas de criação de instâncias \textit{default} do iPOJO não dão suporte nativo a execução em um ambiente OSGi, utilizando, apenas a política \textit{singleton}, mesmo que o usuário tenha definido a criação de uma instância diferente por \textit{bundle}. Isso ocorre porque o D-OSGi disponibiliza serviços remotos localmente através de \textit{proxies}. Deste modo, o \textit{endpoint} remoto é visto localmente como um \textit{bundle}, e este ``mascara'' as invocações locais, de diferentes bundles, ao serviço remoto.
+
+\end{itemize}
+
+\section{Trabalhos Futuros}
+Como pudemos perceber, toda a definição das políticas de gerenciamento de instâncias é feita em tempo de \textit{deployment}. 
+
+Assim, uma possível extensão a este trabalho, seria incorporar um componente inteligente que definisse qual a política que melhor atende ao contexto da aplicação, dentre as possíveis, em tempo de execução.
+
+Outra possibilidade de extensão interessante, seria embutir a capacidade de predição de possíveis quebras de contrato, com base na análise da variação da utilização dos recursos. Para isso, seria necessário um estudo mais aprofundado dos padrões existentes de uso de recursos para cada caso específico. Uma solução baseada em redes neurais, aplicação de técnicas de mineração de dados ou mesmo armazenar tais dados em bases consolidadas para análises mais elaboradas realizadas por ferramentas OLAP, podem ser uma extensão interessante deste trabalho.
+
+Uma limitação atual do mecanismo está em tratar quando um estado de alerta, dispara dois profiles ao mesmo tempo, assim, seria necessária a definição de um modelo de prioridades concorrentes para os \verb profiles ~e \verb resources ~e um estudo focado no cenário de aplicação de cada política.

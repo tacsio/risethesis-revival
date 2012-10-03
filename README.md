@@ -33,3 +33,9 @@ Contributing
 3. Commit your changes (`git commit -am 'Added some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+Changelog
+================
+
+* Modification on input encoding: Uses utf-8
+* Change logos and fix alignments bugs on frontpage and presentatio page
