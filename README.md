@@ -38,4 +38,4 @@ Changelog
 ================
 
 * Modification on input encoding: Uses utf-8
-* Change logos and fix alignments bugs on frontpage and presentatio page
+* Change logos and fix alignments bugs on frontpage and presentation page
